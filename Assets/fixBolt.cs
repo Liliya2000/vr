@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class screw : MonoBehaviour
+public class fixBolt : MonoBehaviour
 {
-    public GameObject Screw;
+    public GameObject bolt;
 }

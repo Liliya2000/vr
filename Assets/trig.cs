@@ -9,48 +9,23 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class trig : MonoBehaviour
 {
-    public GameObject central, arm;
     public Transform pivot;
-    private void Start()
-    {
-       //if (!arm.GetComponent<FixedJoint>())
-       // arm.AddComponent(typeof(FixedJoint));
-    }
+    FixedJoint fj;
+
     void OnTriggerEnter(Collider myTrigger)
     {
        
         if (myTrigger.gameObject.name == "Cube")
         {
-            central.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            
-
-            arm.transform.position = pivot.position;
-            arm.transform.rotation = pivot.rotation;
-            //arm.AddComponent(typeof(FixedJoint));
-            if (!arm.GetComponent<FixedJoint>())
+            gameObject.transform.position = pivot.position;
+            gameObject.transform.rotation = pivot.rotation;
+            if (fj == null)
             {
-                arm.AddComponent<FixedJoint>();
-                //arm.GetComponent<FixedJoint>().enableCollision = true;
-                arm.GetComponent<FixedJoint>().connectedBody = central.GetComponent<Rigidbody>();
+                fj = this.gameObject.AddComponent<FixedJoint>();
+                fj.breakForce = 300;
             }
-            //if (!central.GetComponent<FixedJoint>())
-            //{
-            //    central.AddComponent<FixedJoint>().connectedBody = arm.GetComponent<Rigidbody>();
-            //}
-            //else
-            //{
-            //    if (central.GetComponent<FixedJoint>().connectedBody != arm.GetComponent<Rigidbody>())
-            //        central.AddComponent<FixedJoint>().connectedBody = arm.GetComponent<Rigidbody>();
-            //}
-            //central.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            //arm.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            arm.GetComponent<trig>().enabled = false;
-
         }
     }
-
-  
-
 
 }
 

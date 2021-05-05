@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class triggerBolt : MonoBehaviour
 {
@@ -11,11 +16,23 @@ public class triggerBolt : MonoBehaviour
     private void Update()
     {
         if (gameObject.CompareTag("Screwed"))
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.809f, gameObject.transform.position.z);
+        {
+            Destroy(fj);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0.021f, gameObject.transform.position.z); ;
+            //gameObject.transform.parent = GameObject.Find("untitled").transform;
+            Destroy(gameObject.GetComponent<XRGrabInteractable>());
+            gameObject.AddComponent<FixedJoint>();
+            gameObject.transform.parent = GameObject.Find("rama").transform;
+            if (GameObject.Find("rama").CompareTag("Delete"))
+            {
+                Destroy(GameObject.Find("rama"));
+            }
+            Destroy(gameObject.GetComponent<triggerBolt>());
+        }
     }
     void OnTriggerEnter(Collider myTrigger)
     {
-        //Debug.Log(myTrigger.gameObject.name);
+        
         if (myTrigger.gameObject.tag != "Used")
         {
             switch (myTrigger.gameObject.name)
@@ -23,7 +40,6 @@ public class triggerBolt : MonoBehaviour
                 case "CubeB1":
                     Position(myTrigger);
                     break;
-
 
                 case "CubeB2":
                     Position(myTrigger);
@@ -50,6 +66,22 @@ public class triggerBolt : MonoBehaviour
                     break;
 
                 case "CubeB8":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB9":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB10":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB11":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB12":
                     Position(myTrigger);
                     break;
             }

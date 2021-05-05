@@ -8,17 +8,53 @@ public class UseScreewDriver : MonoBehaviour
 {
     //public GameObject central;
     GameObject bolt;
+    public GameObject untitled, step2;
     public Transform pivot;
+    int destroy = 0;
+    struct BoxIsTrigger
+    {
+        Collider MyTrigger;
+        //public string getTag( Collider MyTrigger)
+        //{
 
-    [System.Obsolete]
+        //}
+
+    }
+    
+    private void Start()
+    {
+        //Instantiate(step2, untitled.transform, false);
+
+
+        //untitled = GameObject.Find("untitled");
+        //GameObject untitle = GameObject.Find("untitled");
+        //GameObject.Find("quadArm1").transform.parent = untitle.transform;
+
+        //MeshFilter[] meshFilters = untitle.GetComponentsInChildren<MeshFilter>();
+        //CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+
+        //int i = 0;
+        //while (i < meshFilters.Length)
+        //{
+        //    combine[i].mesh = meshFilters[i].sharedMesh;
+        //    //combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
+        //    meshFilters[i].gameObject.SetActive(false);
+        //    i++;
+        //}
+        //untitle.transform.GetComponent<MeshFilter>().mesh = new Mesh();
+        //untitle.transform.GetComponent<MeshFilter>().mesh.CombineMeshes(combine);
+        ////untitle.transform.gameObject.SetActive(true);
+    }
+    
+    //[System.Obsolete]
     void OnTriggerEnter(Collider myTrigger)
     {
-
+        
         //List<InputDevice> rightHand = new List<InputDevice>();
         //InputDevices.GetDevicesAtXRNode(XRNode.RightHand, rightHand);
         //InputDevices.GetDevicesWithRole(InputDeviceRole.RightHanded, rightHand);
         //bool isPressed;
-        
+
         //if (XRSettings.isDeviceActive)
         //{
         //    InputHelpers.IsPressed(rightHand[0], InputHelpers.Button.TriggerPressed, out isPressed);
@@ -68,24 +104,58 @@ public class UseScreewDriver : MonoBehaviour
                 case "CubeB8":
                     Position(myTrigger); 
                     break;
+
+                case "CubeB9":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB10":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB11":
+                    Position(myTrigger);
+                    break;
+
+                case "CubeB12":
+                    Position(myTrigger);
+                    break;
             }
         }
     }
     private void Position(Collider myTrigger)
     {
         myTrigger.gameObject.GetComponent<fixBolt>().bolt.tag = "Screwed";
-        //bolt = GameObject.Find(myTrigger.gameObject.GetComponent<fixBolt>().bolt.name);
-        //Debug.Log(bolt.name);
-        //bolt.transform.Translate(0,0,pivot.position.z);
-        //bolt.transform.position = pivot.position;
-        //bolt.transform.position = new Vector3(bolt.transform.position.x, 0.8f, pivot.position.z);
         myTrigger.gameObject.SetActive(false);
-        //gameObject.transform.position = myTrigger.gameObject.transform.position;
-        //gameObject.transform.rotation = pivot.transform.rotation;
-        ////if (!central.GetComponent<FixedJoint>())
-        //central.AddComponent<FixedJoint>().connectedBody = gameObject.GetComponent<Rigidbody>();
-        //gameObject.GetComponent<triggerBolt>().enabled = false;
-        //myTrigger.gameObject.SetActive(false);
+        Destroy(myTrigger.gameObject); destroy ++;
+        //Debug.Log(destroy);
+
+        if (destroy == 8)
+        {
+            //Instantiate(step2, untitled.transform, true );
+            //step2.transform.position = untitled.transform.position;
+            //step2.transform.localScale()
+            //Snap(GameObject.Find("quadArm1"));
+            //Snap(GameObject.Find("quadArm2"));
+            //Snap(GameObject.Find("quadArm3"));
+            //Snap(GameObject.Find("quadArm4"));
+
+            //Rigidbody rigidbody= untitled.GetComponent<Rigidbody>();
+            //rigidbody.constraints = RigidbodyConstraints.None;
+            GameObject.Find("rama").tag = "Delete";
+            step2.SetActive(true);
+        }
+        
+    }
+
+    private void Snap(GameObject gameObject)
+    {
+        
+        //gameObject.transform.parent = untitled.transform;
+        Destroy(gameObject.GetComponent<trig>());
+        Destroy(gameObject.GetComponent<XRGrabInteractable>());
+        //gameObject.GetComponent<FixedJoint>().connectedBody = untitled.GetComponent<Rigidbody>();
+       // gameObject.GetComponent<FixedJoint>().breakForce = 10000000000000;
     }
 }
 //if (Input.GetKey(KeyCode.E)) ;

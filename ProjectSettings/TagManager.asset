@@ -8,6 +8,8 @@ TagManager:
   - Teleport
   - Used
   - Screwed
+  - Done
+  - Delete
   layers:
   - Default
   - TransparentFX

@@ -3,67 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using OVR;
+using OVRTouchSample;
 
 public class UseScreewDriver : MonoBehaviour
 {
     //public GameObject central;
-    GameObject bolt;
-    public GameObject untitled, step2;
+    GameObject /*bolt,*/ dron;
+    public GameObject step2, place_light;
     public Transform pivot;
     int destroy = 0;
-    struct BoxIsTrigger
-    {
-        Collider MyTrigger;
-        //public string getTag( Collider MyTrigger)
-        //{
+    private steps steps;
 
-        //}
 
-    }
+    //private XRController controller;
     
-    private void Start()
-    {
-        //Instantiate(step2, untitled.transform, false);
-
-
-        //untitled = GameObject.Find("untitled");
-        //GameObject untitle = GameObject.Find("untitled");
-        //GameObject.Find("quadArm1").transform.parent = untitle.transform;
-
-        //MeshFilter[] meshFilters = untitle.GetComponentsInChildren<MeshFilter>();
-        //CombineInstance[] combine = new CombineInstance[meshFilters.Length];
-
-        //int i = 0;
-        //while (i < meshFilters.Length)
-        //{
-        //    combine[i].mesh = meshFilters[i].sharedMesh;
-        //    //combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
-        //    meshFilters[i].gameObject.SetActive(false);
-        //    i++;
-        //}
-        //untitle.transform.GetComponent<MeshFilter>().mesh = new Mesh();
-        //untitle.transform.GetComponent<MeshFilter>().mesh.CombineMeshes(combine);
-        ////untitle.transform.gameObject.SetActive(true);
-    }
+    //private void Start()
+    //{
+    //    controller = GetComponent<XRController>();
+    //}
     
     //[System.Obsolete]
+    
     void OnTriggerEnter(Collider myTrigger)
     {
-        
+
         //List<InputDevice> rightHand = new List<InputDevice>();
         //InputDevices.GetDevicesAtXRNode(XRNode.RightHand, rightHand);
         //InputDevices.GetDevicesWithRole(InputDeviceRole.RightHanded, rightHand);
         //bool isPressed;
 
+        //if (controller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 position))
+        //    Debug.Log("trigger");
+
+
+        //OVRInput.Update();
         //if (XRSettings.isDeviceActive)
         //{
-        //    InputHelpers.IsPressed(rightHand[0], InputHelpers.Button.TriggerPressed, out isPressed);
-
-        //    if (isPressed)
+        //    if (OVRInput.Get(OVRInput.Button.One))
+        //    {
         //        SwitchBox(myTrigger);
+        //    }
         //}
         //else
-        SwitchBox(myTrigger);
+            SwitchBox(myTrigger);
 
     }
 
@@ -129,7 +112,7 @@ public class UseScreewDriver : MonoBehaviour
         myTrigger.gameObject.SetActive(false);
         Destroy(myTrigger.gameObject); destroy ++;
         //Debug.Log(destroy);
-
+        
         if (destroy == 8)
         {
             //Instantiate(step2, untitled.transform, true );
@@ -142,20 +125,31 @@ public class UseScreewDriver : MonoBehaviour
 
             //Rigidbody rigidbody= untitled.GetComponent<Rigidbody>();
             //rigidbody.constraints = RigidbodyConstraints.None;
+            place_light.SetActive(true);
             GameObject.Find("rama").tag = "Delete";
+            steps = GameObject.Find("Text").GetComponent<steps>();
+            steps.printText(3);
             step2.SetActive(true);
         }
-        
+        if (destroy == 12)
+        {
+            dron = GameObject.Find("dron2");
+            steps.print(12);
+            //Destroy(dron.GetComponent<XRGrabInteractable>());
+            dron.AddComponent<XRGrabInteractable>();
+            dron.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        }
+
     }
 
-    private void Snap(GameObject gameObject)
-    {
+    //private void Snap(GameObject gameObject)
+    //{
         
-        //gameObject.transform.parent = untitled.transform;
-        Destroy(gameObject.GetComponent<trig>());
-        Destroy(gameObject.GetComponent<XRGrabInteractable>());
-        //gameObject.GetComponent<FixedJoint>().connectedBody = untitled.GetComponent<Rigidbody>();
-       // gameObject.GetComponent<FixedJoint>().breakForce = 10000000000000;
-    }
+    //    //gameObject.transform.parent = untitled.transform;
+    //    Destroy(gameObject.GetComponent<trig>());
+    //    Destroy(gameObject.GetComponent<XRGrabInteractable>());
+    //    //gameObject.GetComponent<FixedJoint>().connectedBody = untitled.GetComponent<Rigidbody>();
+    //   // gameObject.GetComponent<FixedJoint>().breakForce = 10000000000000;
+    //}
 }
 //if (Input.GetKey(KeyCode.E)) ;

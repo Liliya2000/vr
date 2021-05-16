@@ -10,6 +10,8 @@ TagManager:
   - Screwed
   - Done
   - Delete
+  - arm_done
+  - Prop
   layers:
   - Default
   - TransparentFX

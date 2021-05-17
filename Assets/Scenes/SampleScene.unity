@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 25616098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1530,15 +1530,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6250076149019478384, guid: 1f1668f7850476e438c3e5623435fd8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -6195767538593635260, guid: 1f1668f7850476e438c3e5623435fd8a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 991c73e1e8e530e4494a884a2847a6e6, type: 2}
+    - target: {fileID: -2254504247542753893, guid: 1f1668f7850476e438c3e5623435fd8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1554193974251969968, guid: 1f1668f7850476e438c3e5623435fd8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f1668f7850476e438c3e5623435fd8a,
         type: 3}
       propertyPath: m_Name
       value: soldering-iron
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f1668f7850476e438c3e5623435fd8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159819195323411483, guid: 1f1668f7850476e438c3e5623435fd8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8535133971147982272, guid: 1f1668f7850476e438c3e5623435fd8a,
         type: 3}
@@ -3018,7 +3043,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3162,6 +3187,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5915591659270887933, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_EnableUIInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915591659270887933, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950848068812355411, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_UseForceGrab
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950848068812355411, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_EnableUIInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950848068812355411, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 8950848069358543219, guid: da8f471829361f64fbe0fe67337aa750,
         type: 3}
       propertyPath: m_Name
@@ -3174,18 +3224,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.106
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8950848069358543228, guid: da8f471829361f64fbe0fe67337aa750,
         type: 3}
@@ -3222,7 +3287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8950848068812355411, guid: da8f471829361f64fbe0fe67337aa750, type: 3}
+    - {fileID: 8950848068812355409, guid: da8f471829361f64fbe0fe67337aa750, type: 3}
+    - {fileID: 8950848068812355408, guid: da8f471829361f64fbe0fe67337aa750, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da8f471829361f64fbe0fe67337aa750, type: 3}
 --- !u!1 &189995481
 GameObject:
@@ -4246,7 +4314,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6132,6 +6200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f49e6125f6176b04f8ac172dbbad3aca,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f49e6125f6176b04f8ac172dbbad3aca,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -6174,7 +6247,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6382,10 +6455,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 049aeb59ea31a994ebb4909e91f80836, type: 2}
+    - target: {fileID: -5770634479784780433, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
       propertyPath: m_Name
       value: wire4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231362815219648064, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176157410714768559, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8972525955844037355, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
@@ -6585,7 +6678,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6860,10 +6953,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 049aeb59ea31a994ebb4909e91f80836, type: 2}
+    - target: {fileID: -5770634479784780433, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
       propertyPath: m_Name
       value: wire3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231362815219648064, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176157410714768559, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8972525955844037355, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
@@ -8025,7 +8138,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8405,7 +8518,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -9096,7 +9209,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -9380,6 +9493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: motor2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e98f280d4bc91414eae314605f7e0d04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e98f280d4bc91414eae314605f7e0d04, type: 3}
 --- !u!1 &821066515 stripped
@@ -9631,7 +9749,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -12042,7 +12160,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -12420,7 +12538,7 @@ GameObject:
   - component: {fileID: 1093552988}
   - component: {fileID: 1093552987}
   - component: {fileID: 1093552989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: solder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12519,7 +12637,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -12725,10 +12843,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 049aeb59ea31a994ebb4909e91f80836, type: 2}
+    - target: {fileID: -5770634479784780433, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
       propertyPath: m_Name
       value: wire1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231362815219648064, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176157410714768559, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8972525955844037355, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
@@ -12985,6 +13123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: motor1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e98f280d4bc91414eae314605f7e0d04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e98f280d4bc91414eae314605f7e0d04, type: 3}
@@ -13835,7 +13978,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -15522,6 +15665,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505632710}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1507209787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8950848068812355415, guid: da8f471829361f64fbe0fe67337aa750,
+    type: 3}
+  m_PrefabInstance: {fileID: 186275764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1507209788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507209787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 1935410747}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_AttachTransform: {fileID: 0}
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectActionTrigger: 0
+  m_HideControllerOnSelect: 0
+  m_PlayAudioClipOnSelectEntered: 0
+  m_AudioClipForOnSelectEntered: {fileID: 0}
+  m_PlayAudioClipOnSelectExited: 0
+  m_AudioClipForOnSelectExited: {fileID: 0}
+  m_PlayAudioClipOnHoverEntered: 0
+  m_AudioClipForOnHoverEntered: {fileID: 0}
+  m_PlayAudioClipOnHoverExited: 0
+  m_AudioClipForOnHoverExited: {fileID: 0}
+  m_PlayHapticsOnSelectEntered: 0
+  m_HapticSelectEnterIntensity: 0
+  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectExited: 0
+  m_HapticSelectExitIntensity: 0
+  m_HapticSelectExitDuration: 0
+  m_PlayHapticsOnHoverEntered: 0
+  m_HapticHoverEnterIntensity: 0
+  m_HapticHoverEnterDuration: 0
+  m_PlayHapticsOnHoverExited: 0
+  m_HapticHoverExitIntensity: 0
+  m_HapticHoverExitDuration: 0
 --- !u!1 &1529522142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e98f280d4bc91414eae314605f7e0d04,
@@ -15651,6 +15852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -15811,7 +16017,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -17636,7 +17842,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -18427,7 +18633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760306766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PivotScrewdriver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18589,7 +18795,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -19294,7 +19500,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -19459,10 +19665,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 049aeb59ea31a994ebb4909e91f80836, type: 2}
+    - target: {fileID: -5770634479784780433, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
       propertyPath: m_Name
       value: wire2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231362815219648064, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176157410714768559, guid: 9451f34d2c60ff44098e1a83a72ee46c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8972525955844037355, guid: 9451f34d2c60ff44098e1a83a72ee46c,
         type: 3}
@@ -19918,6 +20144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: motor3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e98f280d4bc91414eae314605f7e0d04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e98f280d4bc91414eae314605f7e0d04, type: 3}
@@ -20645,7 +20876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997564318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PivotSoldering
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20985,7 +21216,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -21248,6 +21479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: motor4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e98f280d4bc91414eae314605f7e0d04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e98f280d4bc91414eae314605f7e0d04, type: 3}
 --- !u!1 &2045631233 stripped
@@ -21487,7 +21723,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -21690,7 +21926,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -21980,7 +22216,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -22276,7 +22512,7 @@ MonoBehaviour:
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []

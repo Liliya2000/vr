@@ -18,15 +18,15 @@ public class trig_motors : MonoBehaviour
     void OnTriggerEnter(Collider myTrigger)
     {
 
-        OVRInput.Update();
-        if (XRSettings.isDeviceActive)
-        {
-            if (OVRInput.Get(OVRInput.Button.One))
-            {
-                SwitchBox(myTrigger);
-            }
-        }
-        else
+        // OVRInput.Update();
+        // if (XRSettings.isDeviceActive)
+        // {
+        //     if (OVRInput.Get(OVRInput.Button.One))
+        //     {
+        //         SwitchBox(myTrigger);
+        //     }
+        // }
+        // else
             SwitchBox(myTrigger);
 
     }

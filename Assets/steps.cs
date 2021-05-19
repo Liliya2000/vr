@@ -11,6 +11,8 @@ public class steps : MonoBehaviour
     public RawImage imageScrewdriver, imageSpeedController, imageSolderingIron, imageSoldering, imageEnergy, imageFlightController, imageWire, imagePropeller, imagePlate;
     public GameObject ScrewLight, MotorsLight, energyLight, flightControllerLight, wireLight,propellersLight, plateLight , ScrewLight2;
     GameObject[] prop;
+
+    public GameObject dron;
     
     
     // Start is called before the first frame update
@@ -106,7 +108,9 @@ public class steps : MonoBehaviour
                 {
                     prop[i].GetComponent<rotate>().enabled = true;
                 }
+                dron.SetActive(true);
                 break;
+                
         }
 
     }

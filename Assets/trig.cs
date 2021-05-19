@@ -27,7 +27,7 @@ public class trig : MonoBehaviour
             {
                 fj = this.gameObject.AddComponent<FixedJoint>();
                 // fj.connectedBody = GameObject.Find("untitled").GetComponent<Rigidbody>();
-                fj.breakForce = 300;
+                fj.breakForce = 600;
                 Destroy(Place_light);
                 gameObject.tag = "arm_done";
                 //bolt_light.SetActive(true);
@@ -41,7 +41,7 @@ public class trig : MonoBehaviour
                 {
                     steps = GameObject.Find("Text").GetComponent<steps>();
                     steps.printText(1);
-                    Destroy(GetComponent<trig>());
+                    //Destroy(GetComponent<trig>());
                 }
 
             }

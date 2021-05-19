@@ -14,17 +14,35 @@ public class UseScreewDriver : MonoBehaviour
     public Transform pivot;
     int destroy = 0;
     private steps steps;
+    bool press = false;
+    public bool test = false;
 
 
     //private XRController controller;
-    
+
     //private void Start()
     //{
     //    controller = GetComponent<XRController>();
     //}
-    
+
     //[System.Obsolete]
-    
+
+    private void Update()
+    {
+        if (test)
+        {
+           //dron = GameObject.Find("dron2");
+            steps = GameObject.Find("Text").GetComponent<steps>();
+            steps.printText(12);
+            //Destroy(dron.GetComponent<XRGrabInteractable>());
+            //dron.AddComponent<XRGrabInteractable>();
+            GameObject.Find("LeftHand Controller").GetComponent<testActionController>().enabled = true;
+            //dron.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            //dron.GetComponent<CharacterController>().enabled = true;
+            test = false;
+        }
+    }
+
     void OnTriggerEnter(Collider myTrigger)
     {
 
@@ -46,63 +64,79 @@ public class UseScreewDriver : MonoBehaviour
         //    }
         //}
         //else
+        //Debug.Log("pressed");
             SwitchBox(myTrigger);
 
     }
 
+    public void pressed()
+    {
+        press = true;
+        Debug.Log(press);
+    }
+
+    public void not_pressed()
+    {
+        press = false;
+        Debug.Log(press);
+    } 
+
     private void SwitchBox(Collider myTrigger)
     {
-        if (myTrigger.gameObject.tag == "Used")
+        if (press)
         {
-            switch (myTrigger.gameObject.name)
+            if (myTrigger.gameObject.tag == "Used")
             {
-                case "CubeB1":
-                    Position(myTrigger);
-                    break;
+                switch (myTrigger.gameObject.name)
+                {
+                    case "CubeB1":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB2":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB2":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB3":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB3":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB4":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB4":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB5":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB5":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB6":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB6":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB7":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB7":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB8":
-                    Position(myTrigger); 
-                    break;
+                    case "CubeB8":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB9":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB9":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB10":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB10":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB11":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB11":
+                        Position(myTrigger);
+                        break;
 
-                case "CubeB12":
-                    Position(myTrigger);
-                    break;
+                    case "CubeB12":
+                        Position(myTrigger);
+                        break;
+                }
             }
         }
     }
@@ -110,9 +144,9 @@ public class UseScreewDriver : MonoBehaviour
     {
         myTrigger.gameObject.GetComponent<fixBolt>().bolt.tag = "Screwed";
         myTrigger.gameObject.SetActive(false);
-        Destroy(myTrigger.gameObject); destroy ++;
+        Destroy(myTrigger.gameObject); destroy++;
         //Debug.Log(destroy);
-        
+
         if (destroy == 8)
         {
             //Instantiate(step2, untitled.transform, true );
@@ -133,11 +167,14 @@ public class UseScreewDriver : MonoBehaviour
         }
         if (destroy == 12)
         {
-            dron = GameObject.Find("dron2");
-            steps.print(12);
+            dron = GameObject.Find("Step2");
+            Destroy(dron);
+            steps = GameObject.Find("Text").GetComponent<steps>();
+            GameObject.Find("LeftHand Controller").GetComponent<testActionController>().enabled = true;
+            steps.printText(12);
             //Destroy(dron.GetComponent<XRGrabInteractable>());
-            dron.AddComponent<XRGrabInteractable>();
-            dron.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            //dron.AddComponent<XRGrabInteractable>();
+            //dron.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
 
     }

@@ -12,21 +12,31 @@ public class trig_motors : MonoBehaviour
     public Transform pivot;
     GameObject[] motorsScrew;
     private steps steps;
+    bool press = false;
 
     //[System.Obsolete]
+    public void pressed()
+    {
+        press = true;
+        Debug.Log(press);
+    }
+
+    public void not_pressed()
+    {
+        press = false;
+        Debug.Log(press);
+    }
 
     void OnTriggerEnter(Collider myTrigger)
     {
 
-        // OVRInput.Update();
-        // if (XRSettings.isDeviceActive)
-        // {
-        //     if (OVRInput.Get(OVRInput.Button.One))
-        //     {
-        //         SwitchBox(myTrigger);
-        //     }
-        // }
-        // else
+        if (XRSettings.isDeviceActive)
+        {
+            if (press)
+            {
+                SwitchBox(myTrigger);
+            }
+        } else 
             SwitchBox(myTrigger);
 
     }

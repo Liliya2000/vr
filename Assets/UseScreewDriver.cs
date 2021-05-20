@@ -170,7 +170,7 @@ public class UseScreewDriver : MonoBehaviour
             dron = GameObject.Find("Step2");
             Destroy(dron);
             steps = GameObject.Find("Text").GetComponent<steps>();
-            GameObject.Find("LeftHand Controller").GetComponent<testActionController>().enabled = true;
+            //GameObject.Find("LeftHand Controller").GetComponent<testActionController>().enabled = true;
             steps.printText(12);
             //Destroy(dron.GetComponent<XRGrabInteractable>());
             //dron.AddComponent<XRGrabInteractable>();

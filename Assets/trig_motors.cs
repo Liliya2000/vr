@@ -30,13 +30,13 @@ public class trig_motors : MonoBehaviour
     void OnTriggerEnter(Collider myTrigger)
     {
 
-        if (XRSettings.isDeviceActive)
-        {
-            if (press)
-            {
-                SwitchBox(myTrigger);
-            }
-        } else 
+        // if (XRSettings.isDeviceActive)
+        // {
+        //     if (press)
+        //     {
+        //         SwitchBox(myTrigger);
+        //     }
+        // } else 
             SwitchBox(myTrigger);
 
     }

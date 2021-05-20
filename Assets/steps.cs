@@ -103,11 +103,11 @@ public class steps : MonoBehaviour
             case 12:
                 imagePlate.GetComponent<RawImage>().enabled = false;
                 m_MyText.text = "Поздравляю, Вы справились!";
-                prop = GameObject.FindGameObjectsWithTag("Prop");
-                for (int i=0; i<prop.Length; i++)
-                {
-                    prop[i].GetComponent<rotate>().enabled = true;
-                }
+                // prop = GameObject.FindGameObjectsWithTag("Prop");
+                // for (int i=0; i<prop.Length; i++)
+                // {
+                //     prop[i].GetComponent<rotate>().enabled = true;
+                // }
                 dron.SetActive(true);
                 break;
                 

@@ -6,7 +6,7 @@ public class rotate : MonoBehaviour
 {
     void Update()
     {
-        gameObject.transform.Rotate(new Vector3(0, 10, 0));
+        gameObject.transform.Rotate(new Vector3(0, 35, 0));
     }
 
     //if (timer <= 1)

@@ -53,7 +53,13 @@ public class testActionController : MonoBehaviour
         controller.translateAnchorAction.action.performed += Action_performed1;
         controller.selectAction.action.performed += Action_performed2;
         controller.uiPressAction.action.performed += Action_performed3;
+        controller.rotateAnchorAction.action.performed += Action_performed4;
         //controller.translateAnchorAction.action.performed -= Action_performed1;
+    }
+
+    private void Action_performed4(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Press");
     }
 
     private void Action_performed3(InputAction.CallbackContext obj)
@@ -122,7 +128,7 @@ public class testActionController : MonoBehaviour
         }
 
 
-        if (controller.uiPressAction.action.ReadValueAsObject() != null )
+        if (controller.selectAction.action.ReadValueAsObject() != null )
         {
             //Debug.Log("Press");
             //isPressed = false;
@@ -131,12 +137,12 @@ public class testActionController : MonoBehaviour
 
         }
 
-        if (controller.selectAction.action.ReadValueAsObject() != null)
+        if (controller.uiPressAction.action.ReadValueAsObject() != null)
         {
             //Debug.Log("Press");
             //isPressed = false;
-            Vector3 up = new Vector3(0, -1, 0);
-            character.Move(up * Time.fixedDeltaTime * speed);
+            Vector3 dowm = new Vector3(0, -1, 0);
+            character.Move(dowm * Time.fixedDeltaTime * speed);
         }
 
         //if (direction != Vector3.zero)
